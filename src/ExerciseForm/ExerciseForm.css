@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+.tabs{
+   padding: 5px 3px;
+    border-style: solid;
+}
+
+h3{
+    padding: 12px;
+}
+
+li{
+    list-style: none;
+}
+
+.nav{
+    list-style: none;
+    display: inline-flex;
+
+}
