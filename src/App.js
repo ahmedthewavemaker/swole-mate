@@ -1,53 +1,77 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Landing from './Landing/Landing';
 import Contact from './Contact/Contact';
 import MuscleSelector from './MuscleSelector/MuscleSelector';
 import ExerciseForm from './ExerciseForm/ExerciseForm';
 import { Route, Link } from 'react-router-dom';
 import './App.css';
+import AppContext from './AppContext'
 
 
-function App() {
+
+
+class App extends Component {
+  state = {
+    email: null
+  }
+
+  setEmail = (email) => {
+    this.setState({ email })
+  }
+
+
+render() {
+  const contextValue = {
+    email: this.state.email,
+    setEmail: this.setEmail
+  }
+
   return (
-    <div className="App">
-      <header>
-        <nav>
-          <ul>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/contact'>Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
+    <AppContext.Provider value={contextValue}>
+
+      <div className="App">
+
+        <header>
+          <nav>
+            <ul className='topList'>
+              <li><Link to='/'>Home</Link></li>
+              <li><Link to='/contact'>Contact</Link></li>
+            </ul>
+          </nav>
+        </header>
 
 
-      <main>
-        <Route
-          exact path="/"
-          component={Landing}
-        />
+        <main>
+          <Route
+            exact path="/"
+            component={Landing}
+          />
 
-        <Route
-          path="/muscle"
-          component={MuscleSelector}
-        />
+          <Route
+            path="/muscle"
+            component={MuscleSelector}
+          />
 
-        <Route
-          path="/exercise"
-          component={ExerciseForm}
-        />
+          <Route
+            path="/exercise/:muscle"
+            component={ExerciseForm}
+          />
 
-        <Route
-          path="/contact"
-          component={Contact}
-        />
+          <Route
+            path="/contact"
+            component={Contact}
+          />
 
-      </main>
+        </main>
 
-      <footer>
+        <footer>
 
-      </footer>
-    </div>
+        </footer>
+
+      </div>
+    </ AppContext.Provider>
   );
+}
 }
 
 export default App;

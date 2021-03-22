@@ -1,64 +1,126 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './ExerciseForm.css'
-import { Link, Route } from 'react-router-dom';
-import chest from './chest'
-import back from './back'
-import shoulders from './shoulders'
-import arms from './arms'
-import legs from './legs'
-import miscellaneous from './miscellaneous'
-
-function ExerciseForm() {
-    return (
-        <div>
-            <header>
-                <h1> Swole Mate </h1>
-            </header>
+import { NavLink } from 'react-router-dom';
+import AppContext from '../AppContext'
 
 
-            <div >
-                <ul className="nav">
-                    <li ><h3><Link to="/exercise/chest">Chest</Link></h3></li>
-                    <li><h3><Link to="/exercise/back"> Back</Link></h3></li>
-                    <li><h3> <Link to="/exercise/shoulders">Shoulders</Link></h3></li>
-                    <li><h3> <Link to="/exercise/arms">Arms</Link></h3></li>
-                    <li><h3> <Link to="/exercise/legs">Legs</Link></h3></li>
-                    <li><h3> <Link to="/exercise/miscellaneous">Miscellaneous</Link></h3></li>
-                </ul>
+class ExerciseForm extends Component {
 
-                <div class="list">
-                    <Route
-                        path="/exercise/chest"
-                        component={chest}
-                    />
+    state={
+        exercises: [],
+        
+    }
 
-                    <Route
-                        path="/exercise/back"
-                        component={back}
-                    />
 
-                    <Route
-                        path="/exercise/shoulders"
-                        component={shoulders}
-                    />
 
-                    <Route
-                        path="/exercise/arms"
-                        component={arms}
-                    />
 
-                    <Route
-                        path="/exercise/legs"
-                        component={legs}
-                    />
+    static contextType = AppContext
 
-                    <Route
-                        path="/exercise/miscellaneous"
-                        component={miscellaneous}
-                    />
+
+
+    componentDidMount() {
+        this.getWorkouts();
+
+    }
+
+    //3 functions of the requests (GET, POST, and DELETE)
+    getWorkouts=()=> {
+        const email= this.context.email
+       
+
+        fetch(`http://localhost:8000/api/workout/?email=${email}`)
+            .then(res => res.json())
+            .then(exercises => {
+                
+                this.setState({exercises});
+            })
+
+            
+    }
+
+    postWorkout = (event) => {
+        event.preventDefault();
+        const { exercise, sets, reps } = event.target;
+        
+        const newWorkout = {
+            email: this.context.email,
+            muscle: this.props.match.params.muscle,
+            exercise: exercise.value,
+            reps: reps.value,
+            sets: sets.value
+        }
+
+        fetch(`http://localhost:8000/api/workout`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newWorkout)
+        })
+            .then(response => {
+                this.getWorkouts()
+              
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
+
+
+    render() {
+
+        return (
+            <div>
+                <div>
+                    <header>
+                        <h1> Swole Mate </h1>
+                    </header>
+
+
+                    <div >
+                        <ul className="nav">
+                            <li><h3> <NavLink to="/exercise/chest">Chest</NavLink></h3></li>
+                            <li><h3> <NavLink to="/exercise/back"> Back</NavLink></h3></li>
+                            <li><h3> <NavLink to="/exercise/shoulders">Shoulders</NavLink></h3></li>
+                            <li><h3> <NavLink to="/exercise/arms">Arms</NavLink></h3></li>
+                            <li><h3> <NavLink to="/exercise/legs">Legs</NavLink></h3></li>
+                            <li><h3> <NavLink to="/exercise/miscellaneous">Miscellaneous</NavLink></h3></li>
+                        </ul>
+                        <div>
+                            <ol className='exerciseList'>
+                                <li> {this.props.match.params.muscle} workout 1------Sets: 3------Reps: 10</li>
+                            </ol>
+                            <form onSubmit={this.postWorkout}>
+                                <label htmlFor='exercise'>New Workout: </label>
+                                <input name='exercise' id='exercise' type='text' />
+
+                                <label htmlFor='sets'>Sets: </label>
+                                <input name='sets' id='sets' type='number' />
+
+                                <label htmlFor='reps'>Reps: </label>
+                                <input name='reps' id='reps' type='number' />
+                                <button>Add Workout</button>
+
+                            </form>
+
+                             {this.state.exercises.map(exercise=> {
+                                 return(
+                                <li className='exerciseList'>
+                                    Workout: {exercise.exercise}
+                                    Sets: {exercise.sets}
+                                   Reps: {exercise.reps}
+                                </li>
+                                 )
+                            })}
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        )
+    }
 }
+
 export default ExerciseForm;

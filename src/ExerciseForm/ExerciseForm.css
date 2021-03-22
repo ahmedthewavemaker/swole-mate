@@ -18,5 +18,9 @@ li{
 .nav{
     list-style: none;
     display: inline-flex;
+}
 
+.exerciseList{
+    font-size: large;
+    font-weight: bold;
 }
