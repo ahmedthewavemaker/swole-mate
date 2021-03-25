@@ -6,9 +6,9 @@ import AppContext from '../AppContext'
 
 class ExerciseForm extends Component {
 
-    state={
+    state = {
         exercises: [],
-        
+
     }
 
 
@@ -24,24 +24,24 @@ class ExerciseForm extends Component {
     }
 
     //3 functions of the requests (GET, POST, and DELETE)
-    getWorkouts=()=> {
-        const email= this.context.email
-       
+    getWorkouts = () => {
+        const email = this.context.email
+
 
         fetch(`http://localhost:8000/api/workout/?email=${email}`)
             .then(res => res.json())
             .then(exercises => {
-                
-                this.setState({exercises});
+
+                this.setState({ exercises });
             })
 
-            
+
     }
 
     postWorkout = (event) => {
         event.preventDefault();
         const { exercise, sets, reps } = event.target;
-        
+
         const newWorkout = {
             email: this.context.email,
             muscle: this.props.match.params.muscle,
@@ -59,13 +59,27 @@ class ExerciseForm extends Component {
         })
             .then(response => {
                 this.getWorkouts()
-              
+
             })
             .catch(error => {
                 console.error(error)
             })
     }
 
+    deleteWorkouts = (id) => {
+
+        fetch(`http://localhost:8000/api/workout/${id}`, {
+            method: 'DELETE',
+
+        })
+           
+            .then(exercises => {
+
+                this.getWorkouts()
+            })
+
+
+    }
 
 
     render() {
@@ -89,7 +103,7 @@ class ExerciseForm extends Component {
                         </ul>
                         <div>
                             <ol className='exerciseList'>
-                                <li> {this.props.match.params.muscle} workout 1------Sets: 3------Reps: 10</li>
+                                <li> {this.props.match.params.muscle} workout------ Sets: 3------Reps: 10</li>
                             </ol>
                             <form onSubmit={this.postWorkout}>
                                 <label htmlFor='exercise'>New Workout: </label>
@@ -104,14 +118,21 @@ class ExerciseForm extends Component {
 
                             </form>
 
-                             {this.state.exercises.map(exercise=> {
-                                 return(
-                                <li className='exerciseList'>
-                                    Workout: {exercise.exercise}
+                            {this.state.exercises.filter(e => e.muscle == this.props.match.params.muscle).map(exercise => {
+                                console.log(exercise)
+                                return (
+
+
+                                    <li className='exerciseList'>
+
+                                        Workout: {exercise.exercise}
                                     Sets: {exercise.sets}
                                    Reps: {exercise.reps}
-                                </li>
-                                 )
+                                   muscle: {exercise.muscle}
+
+                                        <button onClick={e => this.deleteWorkouts(exercise.id)}>Delete Workout</button>
+                                    </li>
+                                )
                             })}
 
                         </div>
