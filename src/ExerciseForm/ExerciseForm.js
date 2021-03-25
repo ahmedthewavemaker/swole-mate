@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './ExerciseForm.css'
 import { NavLink } from 'react-router-dom';
-import AppContext from '../AppContext'
+import AppContext from '../AppContext';
+import config from '../config'
 
 
 class ExerciseForm extends Component {
@@ -28,7 +29,7 @@ class ExerciseForm extends Component {
         const email = this.context.email
 
 
-        fetch(`http://localhost:8000/api/workout/?email=${email}`)
+        fetch(`${config.API_ENDPOINT}/api/workout/?email=${email}`)
             .then(res => res.json())
             .then(exercises => {
 
@@ -50,7 +51,7 @@ class ExerciseForm extends Component {
             sets: sets.value
         }
 
-        fetch(`http://localhost:8000/api/workout`, {
+        fetch(`${config.API_ENDPOINT}/api/workout`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -68,7 +69,7 @@ class ExerciseForm extends Component {
 
     deleteWorkouts = (id) => {
 
-        fetch(`http://localhost:8000/api/workout/${id}`, {
+        fetch(`${config.API_ENDPOINT}/api/workout/${id}`, {
             method: 'DELETE',
 
         })
