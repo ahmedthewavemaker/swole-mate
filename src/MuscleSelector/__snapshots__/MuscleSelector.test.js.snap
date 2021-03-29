@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MuscleSelector component renders the UI as expected 1`] = `
+Array [
+  " ",
+  <div>
+    <div>
+      <h2>
+        <a
+          href="/exercise/chest"
+          onClick={[Function]}
+        >
+          Chest 
+          <br />
+          [image]
+        </a>
+      </h2>
+    </div>
+    <div>
+      <h2>
+        <a
+          href="/exercise/back"
+          onClick={[Function]}
+        >
+          Back 
+          <br />
+          [image]
+        </a>
+      </h2>
+    </div>
+    <div>
+      <h2>
+        <a
+          href="/exercise/shoulders"
+          onClick={[Function]}
+        >
+          Shoulders 
+          <br />
+          [image]
+        </a>
+      </h2>
+    </div>
+    <div>
+      <h2>
+        <a
+          href="/exercise/arms"
+          onClick={[Function]}
+        >
+          Arms 
+          <br />
+          [image]
+        </a>
+      </h2>
+    </div>
+    <div>
+      <h2>
+        <a
+          href="/exercise/legs"
+          onClick={[Function]}
+        >
+          Legs 
+          <br />
+          [image]
+        </a>
+      </h2>
+    </div>
+    <div>
+      <h2>
+        <a
+          href="/exercise/miscellaneous"
+          onClick={[Function]}
+        >
+          Miscellaneous 
+          <br />
+          [image]
+        </a>
+      </h2>
+    </div>
+  </div>,
+]
+`;

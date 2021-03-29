@@ -13,6 +13,8 @@ html, body, #root, .App{
 
 .topList{
   text-decoration: none;
+  display: flex;
+  flex-direction: row;
 }
 
 footer{

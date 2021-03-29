@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders the UI as expected 1`] = `
+Array [
+  " ",
+  <div
+    className="App"
+  >
+    <header>
+      <nav>
+        <ul
+          className="topList"
+        >
+          <li>
+            <button>
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                Home
+              </a>
+            </button>
+          </li>
+          <li>
+            <button>
+              <a
+                href="/contact"
+                onClick={[Function]}
+              >
+                Contact
+              </a>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div
+        className="wrapper"
+      >
+        <article
+          className="intro"
+        >
+           Ever go the the gym and feel like you are missing a workout? 
+          <br />
+           Ever go to the gym and forget the routine you are supposed to implement that day?
+          <br />
+           Don't you wish you had a checklist that you can just look at instead of trying to remember which workouts you need to do as other uninvited thoughts rush your head?
+          <br />
+            
+        </article>
+        <h2>
+          YOU ARE NOT ALONE! 
+        </h2>
+         
+        <section>
+           Presenting the Swole Mate! Your personal side-kick/guide that ensures you never skip a workout again! 
+        </section>
+        <h3>
+          Sign up now to get swole!
+        </h3>
+        <form
+          onSubmit={[Function]}
+        >
+          <div>
+            <label
+              className="form"
+              htmlFor="email"
+            >
+              email: 
+            </label>
+            <input
+              id="email"
+              name="email"
+              placeholder="email@website.com"
+              type="text"
+            />
+            <button>
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer />
+  </div>,
+]
+`;

@@ -5,6 +5,7 @@ import AppContext from '../AppContext';
 import config from '../config'
 
 
+
 class ExerciseForm extends Component {
 
     state = {
@@ -142,6 +143,11 @@ class ExerciseForm extends Component {
                 </div>
             </div>
         )
+    }
+}
+ExerciseForm.defaultProps={
+    match: {
+        params: {}
     }
 }
 

@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExerciseForm component renders the UI as expected 1`] = `
+Array [
+  " ",
+  <div>
+    <div>
+      <header>
+        <h1>
+           Swole Mate 
+        </h1>
+      </header>
+      <div>
+        <ul
+          className="nav"
+        >
+          <li>
+            <h3>
+               
+              <a
+                aria-current={null}
+                href="/exercise/chest"
+                onClick={[Function]}
+              >
+                Chest
+              </a>
+            </h3>
+          </li>
+          <li>
+            <h3>
+               
+              <a
+                aria-current={null}
+                href="/exercise/back"
+                onClick={[Function]}
+              >
+                 Back
+              </a>
+            </h3>
+          </li>
+          <li>
+            <h3>
+               
+              <a
+                aria-current={null}
+                href="/exercise/shoulders"
+                onClick={[Function]}
+              >
+                Shoulders
+              </a>
+            </h3>
+          </li>
+          <li>
+            <h3>
+               
+              <a
+                aria-current={null}
+                href="/exercise/arms"
+                onClick={[Function]}
+              >
+                Arms
+              </a>
+            </h3>
+          </li>
+          <li>
+            <h3>
+               
+              <a
+                aria-current={null}
+                href="/exercise/legs"
+                onClick={[Function]}
+              >
+                Legs
+              </a>
+            </h3>
+          </li>
+          <li>
+            <h3>
+               
+              <a
+                aria-current={null}
+                href="/exercise/miscellaneous"
+                onClick={[Function]}
+              >
+                Miscellaneous
+              </a>
+            </h3>
+          </li>
+        </ul>
+        <div>
+          <ol
+            className="exerciseList"
+          >
+            <li>
+               
+               workout------ Sets: 3------Reps: 10
+            </li>
+          </ol>
+          <form
+            onSubmit={[Function]}
+          >
+            <label
+              htmlFor="exercise"
+            >
+              New Workout: 
+            </label>
+            <input
+              id="exercise"
+              name="exercise"
+              type="text"
+            />
+            <label
+              htmlFor="sets"
+            >
+              Sets: 
+            </label>
+            <input
+              id="sets"
+              name="sets"
+              type="number"
+            />
+            <label
+              htmlFor="reps"
+            >
+              Reps: 
+            </label>
+            <input
+              id="reps"
+              name="reps"
+              type="number"
+            />
+            <button>
+              Add Workout
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

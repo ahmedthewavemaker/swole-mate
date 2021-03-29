@@ -1,5 +1,5 @@
 const config= {
-    API_ENDPOINT: "https://salty-sands-57399.herokuapp.com"
+    API_ENDPOINT: "https://intense-reaches-48737.herokuapp.com"
  //    API_ENDPOINT: "http://localhost:8000"
  
  }

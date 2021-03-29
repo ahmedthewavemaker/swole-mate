@@ -34,8 +34,8 @@ render() {
         <header>
           <nav>
             <ul className='topList'>
-              <li><Link to='/'>Home</Link></li>
-              <li><Link to='/contact'>Contact</Link></li>
+              <li><button><Link to='/'>Home</Link></button></li>
+              <li><button><Link to='/contact'>Contact</Link></button></li>
             </ul>
           </nav>
         </header>

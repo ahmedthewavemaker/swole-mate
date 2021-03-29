@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact component renders the UI as expected 1`] = `
+Array [
+  " ",
+  <div
+    className="contact"
+  >
+    <p>
+      Ahmed E
+    </p>
+    <p>
+      number: (132)-222-3334
+    </p>
+    <p>
+      email: mywholeemail@email.com
+    </p>
+  </div>,
+]
+`;

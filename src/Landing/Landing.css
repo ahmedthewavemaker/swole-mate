@@ -8,11 +8,59 @@
   }
   .App {
     text-align: center;
-    background-color: rgb(18, 238, 128);
+  
+    background-image: url('../images/dumbells.jpg');
+    background-repeat: no-repeat ;
+    background-position: center;
  
+  }
+
+  body{
+    background-color: black;
+
+  
   }
   
   .topList{
     text-decoration: none;
   }
   
+  .intro{
+    color: gold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .wrapper{
+    text-align: center;
+    width: 800px;
+    margin: auto;
+    background-color: black;
+    padding: 10px 4px;
+    
+ 
+  }
+
+  section{
+    font-weight: bolder;
+  }
+
+  h2, section{
+    color: gold;
+    font-size: 30px;
+
+  }
+
+  h3{
+    color: gold;
+    font-style: italic;
+  }
+
+  .form{
+    color:gold;
+    font-size: 22px;
+    font-weight: bolder;
+  }
