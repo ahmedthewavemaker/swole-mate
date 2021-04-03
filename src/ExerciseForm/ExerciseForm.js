@@ -105,16 +105,16 @@ class ExerciseForm extends Component {
                         </ul>
                         <div>
                             <ol className='exerciseList'>
-                                <li> {this.props.match.params.muscle} workout------ Sets: 3------Reps: 10</li>
+                                <li> {this.props.match.params.muscle} </li>
                             </ol>
                             <form onSubmit={this.postWorkout}>
                                 <label htmlFor='exercise'>New Workout: </label>
                                 <input name='exercise' id='exercise' type='text' />
 
-                                <label htmlFor='sets'>Sets: </label>
+                                <label htmlFor='sets'>Sets:  </label>
                                 <input name='sets' id='sets' type='number' />
 
-                                <label htmlFor='reps'>Reps: </label>
+                                <label htmlFor='reps'>Reps:  </label>
                                 <input name='reps' id='reps' type='number' />
                                 <button>Add Workout</button>
 
@@ -127,10 +127,10 @@ class ExerciseForm extends Component {
 
                                     <li className='exerciseList'>
 
-                                        Workout: {exercise.exercise}
-                                    Sets: {exercise.sets}
-                                   Reps: {exercise.reps}
-                                   muscle: {exercise.muscle}
+                                    Workout: {exercise.exercise}----
+                                    Sets: {exercise.sets}----  
+                                     Reps: {exercise.reps}----
+                                     Muscle: {exercise.muscle}----
 
                                         <button onClick={e => this.deleteWorkouts(exercise.id)}>Delete Workout</button>
                                     </li>

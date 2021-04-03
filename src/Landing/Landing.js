@@ -32,9 +32,9 @@ class Landing extends Component {
                 <h3>Sign up now to get swole!</h3>
                 <form onSubmit={this.getWorkouts}><div>
 
-                    <label className="form" htmlFor="email">email: </label>
+                    <label className="form" htmlFor="email">Email: </label>
                     <input placeholder="email@website.com" type="text" name="email" id="email" />
-                    <button>Send</button>
+                    <button className='buttonz'>Send</button>
                 </div></form>
             </div>
         );

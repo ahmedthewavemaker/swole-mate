@@ -15,10 +15,34 @@ html, body, #root, .App{
   text-decoration: none;
   display: flex;
   flex-direction: row;
+  
+}
+
+.buttonz{
+  background-color: black;
+  border-color: rgba(0,255, 255);
+  color: gold;
+  font-size: 16px;
+  font-weight: bolder;
+  list-style: none;
+  padding: 2px 4px;
+  margin: 2px;
+  border-radius: 5px;
+  border-width: 2.4px;
+  
 }
 
 footer{
   height: 4px;
+}
+
+a:link{
+  color: rgba(0,255, 255);
+  text-decoration: none;
+}
+a:visited{
+  color: gold;
+ 
 }
 
 
