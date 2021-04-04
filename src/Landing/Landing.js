@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './Landing.css';
 import AppContext from '../AppContext'
 import { render } from '@testing-library/react';
-import dumbells from '../images/dumbells.jpg'
+import dumbells from '../images/dumbells.jpg';
+
 
 
 

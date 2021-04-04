@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './MuscleSelector.css'
 
 
 function MuscleSelector() {
 
     return (
-        <div>
+        <div className='muscle'>
             <div><h2><Link to="/exercise/chest">Chest <br />[image]</Link></h2></div>
             <div><h2><Link to="/exercise/back">Back <br />[image]</Link></h2></div>
             <div><h2><Link to="/exercise/shoulders">Shoulders <br />[image]</Link></h2></div>
