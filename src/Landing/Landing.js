@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './Landing.css';
 import AppContext from '../AppContext'
-import { render } from '@testing-library/react';
-import dumbells from '../images/dumbells.jpg';
+
 
 
 
@@ -28,7 +27,7 @@ class Landing extends Component {
 
                 <h2>YOU ARE NOT ALONE! </h2> <section> Presenting the Swole Mate! Your personal side-kick/guide that ensures you never skip a workout again! </section>
 
-                {/* <img src={dumbells} alt='dumbells' /> */}
+             
 
                 <h3>Sign up now to get swole!</h3>
                 <form onSubmit={this.getWorkouts}><div>

@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+h1{
+font-size: 70px;
+color: rgba(0, 255, 255);
+background-color: rgba(0, 0, 0, 0.8);
+}
+
 .tabs{
    padding: 5px 3px;
     border-style: solid;
@@ -19,10 +25,36 @@ li{
 .nav{
     list-style: none;
     display: inline-flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 9px;
+    
 }
 
 .exerciseList{
-    font-size: large;
+    font-size: 30px;
     font-weight: bold;
-    color: green;
+    color: gold;
+    background-color: rgba(0, 0, 0, 0.8);
+    
 }
+
+form{
+    color: rgba(0, 255, 255);
+    font-weight: 900;
+    background-color: rgba(0, 0, 0, 0.8);
+ 
+}
+
+.buttonz{
+    background-color: black;
+    border-color: rgba(0,255, 255);
+    color: gold;
+    font-size: 16px;
+    font-weight: bolder;
+    list-style: none;
+    padding: 2px 4px;
+    margin: 2px;
+    border-radius: 5px;
+    border-width: 2.4px;
+    
+  }

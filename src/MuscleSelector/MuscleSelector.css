@@ -1,8 +1,68 @@
-.mucscle{
+*{
+    box-sizing: border-box;
+}
+
+.muscle{
     display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    align-items: flex-start;
+   justify-content: space-between;
+   flex-wrap: nowrap;
+   background-color: rgba(0,0,0,0.8)
+}
+
+.chest{
+    padding: 5px;
+}
+
+.chestImage{
+    max-width: 170px;
+    height: 140px;
+}
+
+.back{
+    padding: 5px;
+}
+
+.backImage{
+    max-width: 170px;
+    height: 140px;
+}
+
+.shoulders{
+    padding: 5px;
+}
+
+.shouldersImage{
+    max-width: 170px;
+    height: 140px;
+}
+
+.arms{
+    padding: 5px;
+}
+
+.armsImage{
+    max-width: 170px;
+    height: 140px;
     
 }
 
-a:visited{
-    color: blue;
+.legs{
+    padding: 5px;
+}
+
+.legsImage{
+    max-width: 170px;
+    height: 140px;
+}
+
+.misc{
+    padding: 5px;
+}
+
+.miscImage{
+    max-width: 170px;
+    height: 140px;
 }

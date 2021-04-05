@@ -7,7 +7,7 @@ function Contact() {
       <div className='contact'>
         <p>Ahmed E</p>
         <p>Number: (132)-222-3334</p>
-        <p>Email: mywholeemail@gmail.com</p>
+        <p>Email: elnassehag@alumni.vcu.edu</p>
       </div>
     );
   }

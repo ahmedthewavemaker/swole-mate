@@ -116,7 +116,7 @@ class ExerciseForm extends Component {
 
                                 <label htmlFor='reps'>Reps:  </label>
                                 <input name='reps' id='reps' type='number' />
-                                <button>Add Workout</button>
+                                <button className='buttonz'>Add Workout</button>
 
                             </form>
 
@@ -132,7 +132,7 @@ class ExerciseForm extends Component {
                                      Reps: {exercise.reps}----
                                      Muscle: {exercise.muscle}----
 
-                                        <button onClick={e => this.deleteWorkouts(exercise.id)}>Delete Workout</button>
+                                        <button className='buttonz' onClick={e => this.deleteWorkouts(exercise.id)}>Delete Workout</button>
                                     </li>
                                 )
                             })}
