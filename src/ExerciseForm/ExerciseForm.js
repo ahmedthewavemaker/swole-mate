@@ -127,10 +127,10 @@ class ExerciseForm extends Component {
 
                                     <li className='exerciseList'>
 
-                                    Workout: {exercise.exercise}----
-                                    Sets: {exercise.sets}----  
-                                     Reps: {exercise.reps}----
-                                     Muscle: {exercise.muscle}----
+                                    Workout: {exercise.exercise}--
+                                    Sets: {exercise.sets}--  
+                                     Reps: {exercise.reps}--
+                                    
 
                                         <button className='buttonz' onClick={e => this.deleteWorkouts(exercise.id)}>Delete Workout</button>
                                     </li>

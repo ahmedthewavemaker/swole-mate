@@ -66,3 +66,51 @@
     max-width: 170px;
     height: 140px;
 }
+
+/*Mobile view*/
+@media all and (max-width: 500px){
+    .muscle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+   
+  
+}
+
+
+/*tablet view*/
+@media all and (max-width: 1140px){
+    .muscle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+   
+  
+}
+
+
+
+
+/*desktop view*/
+@media all and (min-width: 1200px){
+    .muscle{
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        align-items: flex-start;
+       justify-content: space-between;
+       flex-wrap: nowrap;
+    }
+
+   
+  
+}
+

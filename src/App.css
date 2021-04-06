@@ -45,5 +45,17 @@ a:visited{
  
 }
 
+@media all and (max-width: 500px){
+  .topList{
+    flex-direction: column;
+    align-content:stretch;
+  }
+
+  ul{
+    text-align: left;
+  }
+
+
+}
 
 

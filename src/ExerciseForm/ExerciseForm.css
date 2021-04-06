@@ -58,3 +58,58 @@ form{
     border-width: 2.4px;
     
   }
+
+
+/*Mobile view*/
+@media all and (max-width: 500px){
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .exerciseList{
+        font-size: 20px;
+    }
+  
+}
+
+
+/*tablet view*/
+@media all and (max-width: 1199px){
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .exerciseList{
+        font-size: 20px;
+    }
+  
+}
+
+
+
+
+
+
+  /*desktop view*/
+@media all and (min-width: 1200px){
+    .muscle{
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        align-items: flex-start;
+       justify-content: space-between;
+       flex-wrap: nowrap;
+    }
+
+   
+  
+}
+
