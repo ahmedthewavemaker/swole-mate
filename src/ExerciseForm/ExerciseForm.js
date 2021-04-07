@@ -120,7 +120,7 @@ class ExerciseForm extends Component {
 
                             </form>
 
-                            {this.state.exercises.filter(e => e.muscle == this.props.match.params.muscle).map(exercise => {
+                            {this.state.exercises.filter(e => e.muscle === this.props.match.params.muscle).map(exercise => {
                                 console.log(exercise)
                                 return (
 

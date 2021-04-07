@@ -68,11 +68,11 @@
 /*Mobile view*/
 @media all and (max-width: 500px){
   .wrapper{
-     width: auto;
+      width: auto;
   }
 
   .intro{
-    font-size: 18px;
+      font-size: 18px;
   }
 
     h2, section {
