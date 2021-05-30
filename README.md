@@ -23,6 +23,7 @@ App designed to organize your workouts and help track progress in regards to set
 -Javascript
 -React
 -Node.js
+-PostgreSQL
 
 
 
